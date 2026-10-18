@@ -50,6 +50,92 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLdData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://scitech.id/#organization",
+      "name": "PT Solusi Cerdas Infrastructure Technology",
+      "alternateName": "SCI Tech",
+      "url": "https://scitech.id",
+      "logo": "https://scitech.id/Group%206.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+6289513259281",
+        "contactType": "technical support & consulting",
+        "email": "solusicerdasinfratech@gmail.com",
+        "areaServed": "ID",
+        "availableLanguage": ["id", "en"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raden Patah VI No. 90",
+        "addressLocality": "Jember",
+        "addressRegion": "Jawa Timur",
+        "addressCountry": "ID"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://scitech.id/#hydra-controller",
+      "name": "HYDRA Edge Industrial Controller",
+      "image": "https://scitech.id/Tampilan%20Produk%20Hydra%20Ori.jpeg",
+      "description": "Perangkat keras kendali industri dan telemetri IoT edge computing dengan RTOS deterministik dan casing weatherproof IP67 untuk otomatisasi irigasi pertanian modern dan sensor industri.",
+      "brand": {
+        "@type": "Brand",
+        "name": "SCI Tech"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://scitech.id/#organization"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://scitech.id/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Bagaimana mekanisme awal konsultasi dan perumusan proyek di SCI Tech?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kami memulai dengan sesi technical discovery gratis selama 1-2 hari untuk mengaudit kebutuhan teknis, merumuskan Project Charter, dan menyusun BoQ (Bill of Quantities) serta arsitektur solusi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah SCI Tech melayani proyek kustom di luar wilayah Jember atau Jawa Timur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tentu. Pengembangan software enterprise, AI model, dan cloud data lakehouse dapat diakses dari seluruh Indonesia. Untuk hardware IoT seperti HYDRA, teknisi kami siap melakukan deployment fisik on-site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana jaminan keamanan data perusahaan dan klausul kerahasiaan (NDA)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kerahasiaan data mitra dijamin oleh Non-Disclosure Agreement (NDA) berkekuatan hukum sebelum repositori atau data operasional dibuka. Seluruh kode sumber dan kekayaan intelektual (IP) menjadi milik penuh klien."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bisakah unit HYDRA diintegrasikan dengan infrastruktur sensor yang sudah kami miliki?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sangat bisa. HYDRA mendukung protokol industri standar seperti Modbus RTU/TCP, MQTT, LoRaWAN, dan sinyal analog 4-20mA untuk disambungkan ke sensor dan SCADA eksisting."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,6 +149,10 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
         />
       </head>
       <body className="bg-white text-slate-800 antialiased selection:bg-[#fe7a00] selection:text-white">
