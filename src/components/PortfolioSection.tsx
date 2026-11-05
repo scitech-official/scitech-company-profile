@@ -96,19 +96,40 @@ export default function PortfolioSection() {
                 portofolioAnim.inView ? `animate-fade-in-up delay-${(i + 1) * 100}` : "opacity-0"
               }`}
             >
-              {/* Image Preview */}
-              <div className="relative w-full aspect-[16/10] bg-slate-100 overflow-hidden">
-                <Image
-                  src={item.img}
-                  alt={item.alt}
-                  fill
-                  className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono font-bold tracking-wider text-slate-800 shadow-sm">
-                  <span>PROYEK {item.num}</span>
+              {/* Browser Window Mockup Frame */}
+              <div className="bg-slate-900 border-b border-slate-800 px-4 py-2.5 flex items-center justify-between select-none">
+                {/* 3 Window Control Dots */}
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
                 </div>
-                <div className="absolute top-4 right-4 inline-flex items-center px-3 py-1 rounded-full bg-slate-900/90 backdrop-blur-md text-[10px] font-mono font-semibold text-white shadow-sm">
+
+                {/* Minimalist URL Bar */}
+                <div className="px-3 py-0.5 rounded-md bg-slate-950/80 border border-slate-800 text-[10px] font-mono text-slate-400 max-w-[200px] sm:max-w-xs truncate">
+                  scitech.id/{item.filterGroup}/{item.id}
+                </div>
+
+                {/* Project Number */}
+                <span className="text-[10px] font-mono font-bold text-[#fe7a00]">
+                  #{item.num}
+                </span>
+              </div>
+
+              {/* Image Preview Canvas (object-contain, full view without cropping) */}
+              <div className="relative w-full aspect-[16/10] bg-slate-950 p-3 sm:p-4 flex items-center justify-center overflow-hidden">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={item.img}
+                    alt={item.alt}
+                    fill
+                    className="object-contain object-center transition-transform duration-300 group-hover:scale-[1.01]"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+
+                {/* Floating Category Tag */}
+                <div className="absolute bottom-3 right-3 inline-flex items-center px-2.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-md border border-slate-700/80 text-[10px] font-mono font-medium text-slate-300 shadow-md">
                   <span>{item.cat}</span>
                 </div>
               </div>
