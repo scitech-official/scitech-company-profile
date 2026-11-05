@@ -57,6 +57,7 @@ export default function Footer() {
                 {[
                   "Ramadhan Camp Platform",
                   "HYDRA Greenhouse",
+                  "Smart School Attendance (SSAS)",
                   "SPK Pasirian",
                   "AI Radar Jember",
                   "Filter Spam Judi Online",

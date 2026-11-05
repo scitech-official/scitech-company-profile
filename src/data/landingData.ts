@@ -316,6 +316,25 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     client: "Sektor: Perlindungan Siber Instansi",
     tags: ["NLP Engine", "Real-Time Defense", "Content Classifier"],
   },
+  {
+    id: "p6",
+    num: "06",
+    cat: "Sektor Instansi Pendidikan",
+    filterGroup: "gov",
+    catColor: "text-[#0086c9]",
+    hoverBorder: "hover:border-[#0086c9]",
+    hoverText: "group-hover:text-[#0086c9]",
+    hoverBg: "group-hover:bg-blue-50/60 group-hover:border-blue-200/50",
+    img: "/Porto_SSAS.jpg",
+    alt: "Smart School Attendance System (SSAS) - Presensi Gerbang Pintar Berbasis Barcode",
+    title: "Smart School Attendance System (SSAS)",
+    desc: "Sistem presensi gerbang pintar berbasis barcode yang dilengkapi pencegahan scan ganda, konfirmasi suara, dan notifikasi WhatsApp otomatis ke orang tua. Sistem ini mempermudah manajemen sekolah dengan pencatatan \"Alpa\" otomatis, grafik kehadiran live, pengaturan kalender kustom, mode WFA, serta ekspor laporan PDF/Excel yang instan dan akurat.",
+    metric: "100%",
+    metricLabel: "Efisiensi Pencatatan Absensi Siswa",
+    metricNote: "Mempermudah dan mendigitalisasi absensi sekolah serta meningkatkan kepercayaan orangtua / wali murid.",
+    client: "Sektor: Instansi Pendidikan",
+    tags: ["Web Dev", "Real-Time Attendance", "School Tech"],
+  },
 ];
 
 export const TIMELINE_STEPS: TimelineStep[] = [

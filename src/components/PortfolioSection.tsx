@@ -10,11 +10,11 @@ export default function PortfolioSection() {
   const [activeFilter, setActiveFilter] = useState<"all" | "iot" | "ai" | "software" | "gov">("all");
 
   const filterTabs = [
-    { id: "all", label: "Semua Proyek", count: 5 },
-    { id: "iot", label: "Smart Farming & IoT", count: 1 },
-    { id: "ai", label: "Artificial Intelligence", count: 2 },
-    { id: "software", label: "Software Enterprise", count: 1 },
-    { id: "gov", label: "Sektor Publik & Edukasi", count: 1 },
+    { id: "all", label: "Semua Proyek", count: PORTFOLIO_ITEMS.length },
+    { id: "iot", label: "Smart Farming & IoT", count: PORTFOLIO_ITEMS.filter((i) => i.filterGroup === "iot").length },
+    { id: "ai", label: "Artificial Intelligence", count: PORTFOLIO_ITEMS.filter((i) => i.filterGroup === "ai").length },
+    { id: "software", label: "Software Enterprise", count: PORTFOLIO_ITEMS.filter((i) => i.filterGroup === "software").length },
+    { id: "gov", label: "Sektor Publik & Edukasi", count: PORTFOLIO_ITEMS.filter((i) => i.filterGroup === "gov").length },
   ];
 
   const filteredItems = PORTFOLIO_ITEMS.filter((item) => {
