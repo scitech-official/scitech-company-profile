@@ -335,6 +335,25 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     client: "Sektor: Instansi Pendidikan",
     tags: ["Web Dev", "Real-Time Attendance", "School Tech"],
   },
+  {
+    id: "p7",
+    num: "07",
+    cat: "Sektor UMKM Pendidikan",
+    filterGroup: "software",
+    catColor: "text-[#0086c9]",
+    hoverBorder: "hover:border-[#0086c9]",
+    hoverText: "group-hover:text-[#0086c9]",
+    hoverBg: "group-hover:bg-blue-50/60 group-hover:border-blue-200/50",
+    img: "/Porto_Sistem Manajemen Bimbel.jpg",
+    alt: "Sistem Manajemen Bimbel - Dashboard dan Otomasi Pembukuan UMKM",
+    title: "Sistem Manajemen Bimbel",
+    desc: "Sistem manajemen bimbel dengan fitur absensi tutor, kelola data siswa, jadwal, keuangan, tutor, dan verifikasi absensi. Dilengkapi penagihan biaya bimbel serta laporan per sesi via WhatsApp, notifikasi honor tutor via WhatsApp, dan dasbor analitik grafik kehadiran, keuangan, dan data operasional secara terpusat.",
+    metric: "90%",
+    metricLabel: "Efisiensi Pembukuan & Manajemen Bimbel",
+    metricNote: "Mempermudah manajemen dan pembukuan UMKM bimbingan belajar secara menyeluruh.",
+    client: "Sektor: UMKM Pendidikan",
+    tags: ["Web GAS", "Management System", "UMKM Tech"],
+  },
 ];
 
 export const TIMELINE_STEPS: TimelineStep[] = [
