@@ -105,14 +105,9 @@ export default function PortfolioSection() {
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
                 </div>
 
-                {/* Minimalist URL Bar */}
-                <div className="px-3 py-0.5 rounded-md bg-slate-950/80 border border-slate-800 text-[10px] font-mono text-slate-400 max-w-[200px] sm:max-w-xs truncate">
-                  scitech.id/{item.filterGroup}/{item.id}
-                </div>
-
                 {/* Project Number */}
                 <span className="text-[10px] font-mono font-bold text-[#fe7a00]">
-                  #{item.num}
+                  PROYEK #{item.num}
                 </span>
               </div>
 
